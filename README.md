@@ -1,1 +1,1 @@
-# uplaybot
+# spotify bot
