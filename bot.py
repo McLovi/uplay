@@ -34,3 +34,4 @@ async def spotify(ctx):
 
     
 bot.run("NDcxNjAzOTIzNzM2NTkyMzg0.DjnPzA.MpfJqyZdZ4aVQUVqu1HFL7CDXRM")
+os.environ[NDcxNjAzOTIzNzM2NTkyMzg0.DjnPzA.MpfJqyZdZ4aVQUVqu1HFL7CDXRM]
