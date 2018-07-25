@@ -21,7 +21,7 @@ async def spotify(ctx):
     if ctx.message.server:
         myline = random.choice(lines)
         split = myline.partition(":")
-        
+       
         embed=discord.Embed(title="Spotify Account", color=0xf45eff)
         embed.set_thumbnail(url="https://pre00.deviantart.net/3d13/th/pre/i/2016/343/0/7/free_minecraft_logo_template_by_curtzeninja-dar2dou.png")
         embed.add_field(name="Email:", value=split[0], inline=False)
@@ -33,5 +33,4 @@ async def spotify(ctx):
         client = discord.Client()
 
     
-bot.run("EUJXdEzC2EDF_G68DOcwFeNaOc74Cq-b")
-.gitignore
+bot.run("NDcxNjAzOTIzNzM2NTkyMzg0.DjnPzA.MpfJqyZdZ4aVQUVqu1HFL7CDXRM")
