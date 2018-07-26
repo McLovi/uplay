@@ -13,7 +13,7 @@ async def on_ready():
    
     
 @bot.command(pass_context=True)
-async def spoti(ctx):
+async def spoti (ctx):
     userName = ctx.message.author.name
     userID = ctx.message.author.id
 
