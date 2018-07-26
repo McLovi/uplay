@@ -1,11 +1,11 @@
-  import discord
+import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import random
 
 Client = discord.Client()
 bot = commands.Bot(command_prefix="<")
-lines = open(r'spotify.txt').read().splitlines()
+lines = open(r'usermcalts.txt').read().splitlines()
 
 @bot.event
 async def on_ready():
@@ -13,7 +13,7 @@ async def on_ready():
    
     
 @bot.command(pass_context=True)
-async def spotify(ctx):
+async def minecraft(ctx):
     userName = ctx.message.author.name
     userID = ctx.message.author.id
 
@@ -31,9 +31,9 @@ async def spotify(ctx):
         embed.add_field(name="Password:", value=split[2], inline=False)
         await bot.send_message(ctx.message.author, embed=embed)
 
-        print("{} Typed <spotify".format(userName))
+        print("{} Typed <minecraft".format(userName))
     else:
         await bot.send_message(ctx.message.author, "You need to be a VIP+ member to use this command, if you are a VIP+ member you must use this command in the server!")   
-   
+     
 bot.run("NDcxOTUxOTAzNDEzMjM5ODI5.DjsTFA.602mzvyAxSkgRBn_p45t_X_DLbw")
 
