@@ -28,7 +28,7 @@ async def getalt spotify(ctx):
         embed.add_field(name="Password:", value=split[2], inline=False)
         await bot.send_message(ctx.message.author, embed=embed)
 
-        print("{} Typed <spotify".format(userName))
+        print("{} Typed $getalt spotify".format(userName))
 
         client = discord.Client()
 
