@@ -10,11 +10,11 @@ lines = open(r'spotify.txt').read().splitlines()
 @bot.event
 async def on_ready():
     print('The bot is online!')
-    await bot.change_presence(game=discord.Game(name='Type $getalt spotify'))
+    await bot.change_presence(game=discord.Game(name='Type $spotify'))
    
     
 @bot.command(pass_context=True)
-async def getalt spotify(ctx):
+async def spotify(ctx):
     userName = ctx.message.author.name
     userID = ctx.message.author.id
 
@@ -28,7 +28,7 @@ async def getalt spotify(ctx):
         embed.add_field(name="Password:", value=split[2], inline=False)
         await bot.send_message(ctx.message.author, embed=embed)
 
-        print("{} Typed $getalt spotify".format(userName))
+        print("{} Typed $spotify".format(userName))
 
         client = discord.Client()
 
