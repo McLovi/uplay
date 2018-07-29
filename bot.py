@@ -30,23 +30,13 @@ async def uplay(ctx):
 
         print("{} Typed $uplay".format(userName))
         
-        @bot.command(pass_context=True)
+        bot.command()
 async def invite(ctx):
-    userName = ctx.message.author.name
-    userID = ctx.message.author.id
-    
-    
-     if ctx.message.server:
-        myline = random.choice(lines)
-        split = myline.partition(":")
+    '''Invite the bot to your server'''
+    await ctx.send(
+       "Invite me to your server: https://discordapp.com/oauth2/authorize?client_id=384044025298026496&scope=bot&permissions=268905542"
+    )
         
-    embed=discord.Embed(title="Spotify Account", color=0xf45eff)
-        embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lEkpFJyS4zJJtyvgqmTR7NoR4-Wg3BaOSmQbDZInmOtxvz6MA")
-        embed.add_field(name="Email:", value=split[0], inline=False)
-        embed.add_field(name="Password:", value=split[2], inline=False)
-        await bot.send_message(ctx.message.author, embed=embed)
-
-
         client = discord.Client()
 
 bot.run("NDcyMzU0NjA0ODMxNzM1ODE4.Dj3LlQ.Uq7P7i9IaSZ7fNBocU0-_za1tbM")
