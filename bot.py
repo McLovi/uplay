@@ -29,6 +29,12 @@ async def uplay(ctx):
         await bot.send_message(ctx.message.author, embed=embed)
 
         print("{} Typed $uplay".format(userName))
+        
+        @bot.command(pass_context=True)
+async def invite(ctx):
+    userName = ctx.message.author.name
+    userID = ctx.message.author.id
+
 
         client = discord.Client()
 
