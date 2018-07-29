@@ -30,7 +30,7 @@ async def uplay(ctx):
 
         print("{} Typed $uplay".format(userName))
         
-        bot.command()
+      @bot.command(pass_context=True)
 async def invite(ctx):
     '''Invite the bot to your server'''
     await ctx.send(
