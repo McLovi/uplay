@@ -34,6 +34,12 @@ async def uplay(ctx):
 async def invite(ctx):
     userName = ctx.message.author.name
     userID = ctx.message.author.id
+    
+    embed=discord.Embed(title="Spotify Account", color=0xf45eff)
+        embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lEkpFJyS4zJJtyvgqmTR7NoR4-Wg3BaOSmQbDZInmOtxvz6MA")
+        embed.add_field(name="Email:", value=split[0], inline=False)
+        embed.add_field(name="Password:", value=split[2], inline=False)
+        await bot.send_message(ctx.message.author, embed=embed)
 
 
         client = discord.Client()
