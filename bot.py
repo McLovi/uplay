@@ -35,6 +35,11 @@ async def invite(ctx):
     userName = ctx.message.author.name
     userID = ctx.message.author.id
     
+    
+     if ctx.message.server:
+        myline = random.choice(lines)
+        split = myline.partition(":")
+        
     embed=discord.Embed(title="Spotify Account", color=0xf45eff)
         embed.set_thumbnail(url="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9lEkpFJyS4zJJtyvgqmTR7NoR4-Wg3BaOSmQbDZInmOtxvz6MA")
         embed.add_field(name="Email:", value=split[0], inline=False)
