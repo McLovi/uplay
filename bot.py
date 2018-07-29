@@ -2,15 +2,45 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import random
+import discord
+import time
+import asyncio
+
+client = discord.Client()
+
+start_time = {"start_time1": time.time()}
+
+cooldown_time = 3600
+
+@client.event
+async def on_ready():
+    print('Eingeloggt als')
+    print(client.user.name)
+    print(client.user.id)
+    print('-----------')
+    await bot.change_presence(game=discord.Game(name='Type $uplay'))
+
+
+@client.event
+async def on_message(message):
+    start_time["start_time1"] = time.time()
+
+
+async def cooldown():
+    await client.wait_until_ready()
+
+    while not client.is_closed:
+        await asyncio.sleep(1)
+
+        if time.time() >= start_time["start_time1"] + cooldown_time:
+            for server in client.servers:
+                await client.send_message(server.default_channel, "Hallo, noch jemand da?")
+
+client.loop.create_task(cooldown())
 
 Client = discord.Client()
 bot = commands.Bot(command_prefix="$")
 lines = open(r'spotify.txt').read().splitlines()
-
-@bot.event
-async def on_ready():
-    print('The bot is online!')
-    await bot.change_presence(game=discord.Game(name='Type $uplay'))
    
     
 @bot.command(pass_context=True)
