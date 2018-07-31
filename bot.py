@@ -10,12 +10,12 @@ lines = open(r'spotify.txt').read().splitlines()
 @bot.event
 async def on_ready():
     print("The bot is online!")
+    await bot.change_presence(game=discord.Game(name='Type $spotify'))
 
-@commands.cooldown(1, 30, commands.BucketType.user)
-@bot.command(pass_context=True)
-async def gen(ctx):
-    userName = ctx.message.author.name
-    userID = ctx.message.author.id
+    @bot.command(pass_context=True)
+    async def gen(ctx):
+      userName = ctx.message.author.name
+      userID = ctx.message.author.id
 
     if ctx.message.server:
         await bot.delete_message(ctx.message)
