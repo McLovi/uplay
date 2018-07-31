@@ -30,4 +30,4 @@ async def on_ready():
 
     print("{} Typed !gen".format(userName))
 
-bot.run("NDcyMzU0NjA0ODMxNzM1ODE4.Dj3LlQ.Uq7P7i9IaSZ7fNBocU0-_za1tbM")
+bot.run("NDcyMzU0NjA0ODMxNzM1ODE4.DkIpAw.Mnc_26IkWivW16no8HqroENieFM")
