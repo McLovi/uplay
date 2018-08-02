@@ -12,7 +12,7 @@ async def on_ready():
     print('The bot is online!')
     await bot.change_presence(game=discord.Game(name='Type $uplay'))
    
-@commands.cooldown(1, 10, commands.BucketType.user)
+@commands.cooldown(1, 15, commands.BucketType.user)
 @bot.command(pass_context=True)
 async def uplay(ctx):
     userName = ctx.message.author.name
@@ -32,5 +32,5 @@ async def uplay(ctx):
 
         client = discord.Client()
 
-bot.run("NDcyMzU0NjA0ODMxNzM1ODE4.DkNMZw.hdafAMmzR-ir6lXdAW9FvXHixyE")
+bot.run("NDc0NjUxNzQ0NTIyMjA3MjQ1.DkT31A.Lzlrm0fBvvShkJbeCbssFyHoF98")
 
