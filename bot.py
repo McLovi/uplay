@@ -5,7 +5,7 @@ import random
 
 Client = discord.Client()
 bot = commands.Bot(command_prefix="$")
-lines = open(r'usermcalts.txt').read().splitlines()
+lines = open(r'uplay.txt').read().splitlines()
 
 @bot.event
 async def on_ready():
